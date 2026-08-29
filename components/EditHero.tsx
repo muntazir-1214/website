@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import Link from "next/link";
 import Hero3DSection from "@/components/Hero3DSection";
 
@@ -134,7 +134,7 @@ export default function EditHero({ content: initialContent }: { content: Content
 
   return (
     <>
-      {/* HERO */}
+      {/* HERO — read-only */}
       <section className="relative overflow-hidden bg-grid">
         <div
           className="pointer-events-none absolute inset-0"
@@ -147,38 +147,38 @@ export default function EditHero({ content: initialContent }: { content: Content
           <div className="relative z-10 space-y-7">
             <span className="inline-flex items-center gap-2 rounded-full border border-lime-400/40 bg-lime-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-lime-300 animate-fade-up">
               <span className="h-1.5 w-1.5 rounded-full bg-lime-400 animate-pulse-glow" />
-              <InlineField value={c.heroTagline} field="heroTagline" content={contentRef} onSaved={onSaved} />
+              {c.heroTagline}
             </span>
             <h1 className="font-display text-7xl leading-[0.9] tracking-wide text-zinc-50 sm:text-8xl lg:text-9xl animate-fade-up" style={{ animationDelay: "80ms" }}>
-              <InlineField value={c.heroTitle1} field="heroTitle1" content={contentRef} onSaved={onSaved} tag="span" />
+              {c.heroTitle1}
               <br />
               <span className="text-gradient">
-                <InlineField value={c.heroTitle2} field="heroTitle2" content={contentRef} onSaved={onSaved} tag="span" />
+                {c.heroTitle2}
               </span>
             </h1>
             <p className="max-w-md text-lg leading-8 text-zinc-400 animate-fade-up" style={{ animationDelay: "160ms" }}>
-              <InlineField value={c.heroDescription} field="heroDescription" content={contentRef} onSaved={onSaved} tag="span" rows={3} className="text-lg leading-8 text-zinc-400" />
+              {c.heroDescription}
             </p>
             <div className="flex flex-wrap gap-3 animate-fade-up" style={{ animationDelay: "240ms" }}>
               <Link href="/shop" className="btn btn-primary">
-                <InlineField value={c.heroCTA1} field="heroCTA1" content={contentRef} onSaved={onSaved} />
+                {c.heroCTA1}
               </Link>
               <Link href="/shop?category=t-shirts" className="btn btn-ghost">
-                <InlineField value={c.heroCTA2} field="heroCTA2" content={contentRef} onSaved={onSaved} />
+                {c.heroCTA2}
               </Link>
             </div>
             <div className="flex gap-8 pt-2 animate-fade-up" style={{ animationDelay: "320ms" }}>
               {[
-                { val: c.heroStat1Value, lbl: c.heroStat1Label, vf: "heroStat1Value", lf: "heroStat1Label" },
-                { val: c.heroStat2Value, lbl: c.heroStat2Label, vf: "heroStat2Value", lf: "heroStat2Label" },
-                { val: c.heroStat3Value, lbl: c.heroStat3Label, vf: "heroStat3Value", lf: "heroStat3Label" },
-              ].map((s) => (
-                <div key={s.vf}>
+                { val: c.heroStat1Value, lbl: c.heroStat1Label },
+                { val: c.heroStat2Value, lbl: c.heroStat2Label },
+                { val: c.heroStat3Value, lbl: c.heroStat3Label },
+              ].map((s, i) => (
+                <div key={i}>
                   <p className="font-display text-3xl text-lime-400">
-                    <InlineField value={s.val} field={s.vf} content={contentRef} onSaved={onSaved} />
+                    {s.val}
                   </p>
                   <p className="text-xs uppercase tracking-widest text-zinc-500">
-                    <InlineField value={s.lbl} field={s.lf} content={contentRef} onSaved={onSaved} />
+                    {s.lbl}
                   </p>
                 </div>
               ))}
@@ -198,7 +198,7 @@ export default function EditHero({ content: initialContent }: { content: Content
         </div>
       </section>
 
-      {/* Promo banner */}
+      {/* Promo banner — still editable */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <div className="relative overflow-hidden rounded-3xl border border-lime-400/30 bg-linear-to-r from-lime-400/15 via-lime-400/5 to-transparent px-8 py-16 sm:px-14">
           <div className="bg-grid absolute inset-0 opacity-60" />
@@ -230,6 +230,3 @@ export default function EditHero({ content: initialContent }: { content: Content
     </>
   );
 }
-
-// Need useRef import
-import { useRef } from "react";
