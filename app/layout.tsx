@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/lib/CartContext";
+import { getContent } from "@/lib/adminStore";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
@@ -23,21 +25,32 @@ export const metadata: Metadata = {
     "DARKWEAR streetwear store. Shirts, t-shirts, trousers, hoodies, jackets and shorts. New drops every week, free worldwide shipping.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const content = await getContent();
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${bebas.variable} h-full antialiased`}
     >
+      <head>
+        {process.env.NODE_ENV === "development" && (
+          <Script
+            src="//unpkg.com/react-grab/dist/index.global.js"
+            crossOrigin="anonymous"
+            strategy="beforeInteractive"
+          />
+        )}
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <CartProvider>
           <Header />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <Footer content={content} />
           <CartDrawer />
         </CartProvider>
       </body>

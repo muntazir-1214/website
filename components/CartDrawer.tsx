@@ -65,6 +65,7 @@ export default function CartDrawer() {
                     <ProductImage
                       category={item.product.category}
                       color={item.product.colors[0].hex}
+                      image={item.product.image}
                       className="w-14"
                     />
                   </div>

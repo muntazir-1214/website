@@ -1,0 +1,238 @@
+[
+  {
+    "customerName": "John Doe",
+    "email": "john@test.com",
+    "items": [
+      {
+        "productId": "onyx-oversized-tee",
+        "name": "Onyx Oversized Tee",
+        "qty": 2,
+        "price": 39
+      },
+      {
+        "productId": "heavyweight-hoodie",
+        "name": "Heavyweight Hoodie",
+        "qty": 1,
+        "price": 85
+      }
+    ],
+    "total": 163,
+    "status": "shipped",
+    "id": "ord-1788009945066-quepf0",
+    "createdAt": "2026-08-29T13:25:45.066Z"
+  },
+  {
+    "customerName": "Alex Johnson",
+    "email": "alex@example.com",
+    "items": [
+      {
+        "productId": "onyx-oversized-tee",
+        "name": "Onyx Oversized Tee",
+        "qty": 2,
+        "price": 39
+      },
+      {
+        "productId": "heavyweight-hoodie",
+        "name": "Heavyweight Hoodie",
+        "qty": 1,
+        "price": 85
+      }
+    ],
+    "total": 163,
+    "status": "delivered",
+    "id": "ord-1788010151734-g2dzwl",
+    "createdAt": "2026-08-29T13:29:11.734Z"
+  },
+  {
+    "customerName": "Sarah Chen",
+    "email": "sarah@example.com",
+    "items": [
+      {
+        "productId": "cargo-combat-trousers",
+        "name": "Cargo Combat Trousers",
+        "qty": 1,
+        "price": 89
+      },
+      {
+        "productId": "neon-district-tee",
+        "name": "Neon District Tee",
+        "qty": 2,
+        "price": 35
+      }
+    ],
+    "total": 159,
+    "status": "delivered",
+    "id": "ord-1788010152067-5qp87p",
+    "createdAt": "2026-08-29T13:29:12.067Z"
+  },
+  {
+    "customerName": "Marcus Williams",
+    "email": "marcus@example.com",
+    "items": [
+      {
+        "productId": "bomber-jacket",
+        "name": "Bomber Jacket",
+        "qty": 1,
+        "price": 129
+      }
+    ],
+    "total": 129,
+    "status": "shipped",
+    "id": "ord-1788010152485-vpl0fj",
+    "createdAt": "2026-08-29T13:29:12.485Z"
+  },
+  {
+    "customerName": "Emma Rodriguez",
+    "email": "emma@example.com",
+    "items": [
+      {
+        "productId": "shadow-plaid-overshirt",
+        "name": "Shadow Plaid Overshirt",
+        "qty": 1,
+        "price": 79
+      },
+      {
+        "productId": "carpenter-denim-pants",
+        "name": "Carpenter Denim Pants",
+        "qty": 1,
+        "price": 75
+      },
+      {
+        "productId": "ghost-logo-tee",
+        "name": "Ghost Logo Tee",
+        "qty": 3,
+        "price": 42
+      }
+    ],
+    "total": 280,
+    "status": "shipped",
+    "id": "ord-1788010152807-ply8xx",
+    "createdAt": "2026-08-29T13:29:12.807Z"
+  },
+  {
+    "customerName": "James Park",
+    "email": "james@example.com",
+    "items": [
+      {
+        "productId": "varsity-jacket",
+        "name": "Varsity Jacket",
+        "qty": 1,
+        "price": 149
+      },
+      {
+        "productId": "midnight-oxford-shirt",
+        "name": "Midnight Oxford Shirt",
+        "qty": 2,
+        "price": 69
+      }
+    ],
+    "total": 287,
+    "status": "pending",
+    "id": "ord-1788010153120-fwtd4p",
+    "createdAt": "2026-08-29T13:29:13.120Z"
+  },
+  {
+    "customerName": "Olivia Brown",
+    "email": "olivia@example.com",
+    "items": [
+      {
+        "productId": "relaxed-cargo-shorts",
+        "name": "Relaxed Cargo Shorts",
+        "qty": 2,
+        "price": 55
+      },
+      {
+        "productId": "oversized-pullover",
+        "name": "Oversized Pullover",
+        "qty": 1,
+        "price": 79
+      }
+    ],
+    "total": 189,
+    "status": "delivered",
+    "id": "ord-1788010153540-q1vct7",
+    "createdAt": "2026-08-29T13:29:13.540Z"
+  },
+  {
+    "customerName": "David Kim",
+    "email": "david@example.com",
+    "items": [
+      {
+        "productId": "pleated-wide-leg-trouser",
+        "name": "Pleated Wide-Leg Trouser",
+        "qty": 1,
+        "price": 95
+      },
+      {
+        "productId": "embroidered-zip-hoodie",
+        "name": "Embroidered Zip Hoodie",
+        "qty": 1,
+        "price": 99
+      }
+    ],
+    "total": 194,
+    "status": "pending",
+    "id": "ord-1788010153883-h6p8if",
+    "createdAt": "2026-08-29T13:29:13.883Z"
+  },
+  {
+    "customerName": "Sophie Taylor",
+    "email": "sophie@example.com",
+    "items": [
+      {
+        "productId": "graphic-camp-shirt",
+        "name": "Graphic Camp Shirt",
+        "qty": 1,
+        "price": 59
+      },
+      {
+        "productId": "tie-dye-beach-shorts",
+        "name": "Tie-Dye Beach Shorts",
+        "qty": 2,
+        "price": 45
+      }
+    ],
+    "total": 149,
+    "status": "shipped",
+    "id": "ord-1788010154207-tf37ij",
+    "createdAt": "2026-08-29T13:29:14.207Z"
+  },
+  {
+    "customerName": "Ryan Mitchell",
+    "email": "ryan@example.com",
+    "items": [
+      {
+        "productId": "heavyweight-hoodie",
+        "name": "Heavyweight Hoodie",
+        "qty": 3,
+        "price": 85
+      }
+    ],
+    "total": 255,
+    "status": "delivered",
+    "id": "ord-1788010154535-aokjpp",
+    "createdAt": "2026-08-29T13:29:14.535Z"
+  },
+  {
+    "customerName": "Mia Garcia",
+    "email": "mia@example.com",
+    "items": [
+      {
+        "productId": "onyx-oversized-tee",
+        "name": "Onyx Oversized Tee",
+        "qty": 1,
+        "price": 39
+      },
+      {
+        "productId": "utility-trucker-jacket",
+        "name": "Utility Trucker Jacket",
+        "qty": 1,
+        "price": 119
+      }
+    ],
+    "total": 158,
+    "status": "cancelled",
+    "id": "ord-1788010154851-471yi7",
+    "createdAt": "2026-08-29T13:29:14.851Z"
+  }
+]

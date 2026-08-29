@@ -3,6 +3,20 @@
 :root {
   --background: #09090b;
   --foreground: #fafafa;
+  --admin-accent: #a3e635;
+  --admin-accent-soft: #d9f99d;
+  --admin-accent-muted: #65a30d;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --background: #fafafa;
+  --foreground: #09090b;
+}
+
+[data-theme="light"] body {
+  background: var(--background);
+  color: var(--foreground);
 }
 
 @theme inline {
@@ -20,6 +34,54 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
+/* ─── Admin theme helpers ─── */
+.admin-card {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 1rem;
+}
+[data-theme="light"] .admin-card {
+  background: #ffffff;
+  border-color: #e4e4e7;
+}
+
+.admin-surface {
+  background: #09090b;
+  border: 1px solid #27272a;
+}
+[data-theme="light"] .admin-surface {
+  background: #f4f4f5;
+  border-color: #d4d4d8;
+}
+
+.admin-text {
+  color: #fafafa;
+}
+[data-theme="light"] .admin-text {
+  color: #09090b;
+}
+
+.admin-text-muted {
+  color: #a1a1aa;
+}
+[data-theme="light"] .admin-text-muted {
+  color: #71717a;
+}
+
+.admin-text-dim {
+  color: #52525b;
+}
+[data-theme="light"] .admin-text-dim {
+  color: #a1a1aa;
+}
+
+.admin-border {
+  border-color: #27272a;
+}
+[data-theme="light"] .admin-border {
+  border-color: #e4e4e7;
+}
+
 ::selection {
   background: rgba(163, 230, 53, 0.35);
 }
@@ -28,11 +90,14 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: var(--background);
 }
 ::-webkit-scrollbar-thumb {
   background: #27272a;
   border-radius: 8px;
+}
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
 }
 
 /* ---------- keyframes ---------- */

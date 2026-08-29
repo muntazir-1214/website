@@ -1,0 +1,11 @@
+[
+  {
+    "id": "notif-1788009956253-q3aj",
+    "orderId": "ord-1788009945066-quepf0",
+    "recipient": "john@test.com",
+    "subject": "[DARKWEAR] Order Shipped — Order #ord-1788",
+    "status": "skipped",
+    "channel": "console",
+    "timestamp": "2026-08-29T13:25:56.253Z"
+  }
+]

@@ -65,6 +65,20 @@ export default function Header() {
           </nav>
 
           <div className="ml-auto flex items-center gap-2">
+            {/* Admin link */}
+            <Link
+              href="/admin"
+              className="hidden md:flex h-10 items-center gap-1.5 rounded-full border border-zinc-800 px-3.5 text-xs font-semibold text-zinc-500 transition-all hover:border-lime-400/60 hover:text-lime-300 active:scale-95"
+              title="Admin Portal"
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <rect x="1" y="1" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.3" />
+                <rect x="8" y="1" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.3" />
+                <rect x="1" y="8" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.3" />
+                <rect x="8" y="8" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.3" />
+              </svg>
+              Admin
+            </Link>
             {/* Search */}
             <div className="hidden md:block">
               <form onSubmit={submitSearch} role="search" className="relative">

@@ -50,6 +50,7 @@ export default function ProductCard({
           <ProductImage
             category={product.category}
             color={color.hex}
+            image={product.image}
             className="w-4/5 drop-shadow-[0_18px_25px_rgba(0,0,0,0.45)] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3"
           />
           <button

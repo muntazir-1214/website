@@ -33,6 +33,10 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# uploads (managed by admin portal)
+public/uploads/*
+!public/uploads/.gitkeep
+
 # vercel
 .vercel
 

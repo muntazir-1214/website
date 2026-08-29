@@ -32,6 +32,10 @@ export type Product = {
   sizes: string[];
   badge?: "NEW" | "SALE" | "HOT";
   featured?: boolean;
+  /** Optional uploaded image path relative to public/, e.g. "/uploads/foo.webp" */
+  image?: string;
+  /** Additional gallery images */
+  gallery?: string[];
 };
 
 export const products: Product[] = [

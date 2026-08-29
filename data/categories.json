@@ -1,0 +1,50 @@
+[
+  {
+    "id": "shirts",
+    "label": "Shirts",
+    "slug": "shirts",
+    "description": "Button-downs, oxfords, and camp shirts",
+    "sortOrder": 0,
+    "visible": true
+  },
+  {
+    "id": "t-shirts",
+    "label": "T-Shirts",
+    "slug": "t-shirts",
+    "description": "Heavyweight tees and graphic tops",
+    "sortOrder": 1,
+    "visible": true
+  },
+  {
+    "id": "trousers",
+    "label": "Trousers",
+    "slug": "trousers",
+    "description": "Cargos, denim, and wide-leg pants",
+    "sortOrder": 2,
+    "visible": true
+  },
+  {
+    "id": "shorts",
+    "label": "Shorts",
+    "slug": "shorts",
+    "description": "Cargo shorts and beach shorts",
+    "sortOrder": 3,
+    "visible": true
+  },
+  {
+    "id": "hoodies",
+    "label": "Hoodies",
+    "slug": "hoodies",
+    "description": "Pullovers, zips, and heavy fleece",
+    "sortOrder": 4,
+    "visible": true
+  },
+  {
+    "id": "jackets",
+    "label": "Jackets",
+    "slug": "jackets",
+    "description": "Bombers, truckers, and varsity jackets",
+    "sortOrder": 5,
+    "visible": true
+  }
+]

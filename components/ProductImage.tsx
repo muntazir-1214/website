@@ -127,12 +127,27 @@ const ICONS: Record<Category, (color: string) => ReactNode> = {
 export default function ProductImage({
   category,
   color,
+  image,
   className,
 }: {
   category: Category;
   color: string;
+  image?: string;
   className?: string;
 }) {
+  // If an uploaded image exists, show it instead of the SVG icon
+  if (image) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={image}
+        alt=""
+        className={`${className} object-contain`}
+        loading="lazy"
+      />
+    );
+  }
+
   const icon = ICONS[category] ?? TeeIcon;
   return (
     <svg viewBox="0 0 200 200" className={className} aria-hidden="true">

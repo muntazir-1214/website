@@ -243,7 +243,7 @@ export default function CheckoutPage() {
             {items.map((it) => (
               <div key={`${it.product.id}-${it.size}-${it.color}`} className="flex items-center gap-3">
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-zinc-900">
-                  <ProductImage category={it.product.category} color={it.product.colors[0].hex} className="w-10" />
+                  <ProductImage category={it.product.category} color={it.product.colors[0].hex} image={it.product.image} className="w-10" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="truncate text-sm font-semibold text-zinc-200">{it.product.name}</p>

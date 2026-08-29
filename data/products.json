@@ -1,0 +1,1041 @@
+[
+  {
+    "id": "shadow-plaid-overshirt",
+    "name": "Shadow Plaid Overshirt",
+    "category": "shirts",
+    "price": 79,
+    "oldPrice": 99,
+    "rating": 4.7,
+    "reviews": 214,
+    "description": "A heavyweight brushed-cotton overshirt in a muted shadow plaid. Layer it over a tee or wear it buttoned up \u2014 it does both.",
+    "details": [
+      "100% brushed cotton, 340gsm",
+      "Relaxed oversize fit",
+      "Tonal corozo buttons"
+    ],
+    "colors": [
+      {
+        "name": "Charcoal",
+        "hex": "#3f3f46"
+      },
+      {
+        "name": "Olive",
+        "hex": "#4d7c0f"
+      },
+      {
+        "name": "Bone",
+        "hex": "#e7e5e4"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "SALE",
+    "featured": true,
+    "image": "/uploads/shadow-plaid-overshirt.jpg"
+  },
+  {
+    "id": "midnight-oxford-shirt",
+    "name": "Midnight Oxford Shirt",
+    "category": "shirts",
+    "price": 69,
+    "rating": 4.6,
+    "reviews": 132,
+    "description": "Garment-dyed oxford cloth in deep midnight blue. A crisp everyday shirt with a slightly dropped shoulder.",
+    "details": [
+      "100% cotton oxford weave",
+      "Garment-dyed, soft hand feel",
+      "Mother-of-pearl buttons"
+    ],
+    "colors": [
+      {
+        "name": "Midnight",
+        "hex": "#1e293b"
+      },
+      {
+        "name": "Bone",
+        "hex": "#e7e5e4"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "/uploads/midnight-oxford-shirt.jpg"
+  },
+  {
+    "id": "graphic-camp-shirt",
+    "name": "Graphic Camp Shirt",
+    "category": "shirts",
+    "price": 59,
+    "rating": 4.5,
+    "reviews": 98,
+    "description": "Vintage-inspired camp collar shirt with an all-over distressed graphic print. Short sleeves, boxy cut.",
+    "details": [
+      "Viscose-cotton blend",
+      "Camp collar, boxy cut",
+      "All-over print"
+    ],
+    "colors": [
+      {
+        "name": "Sand",
+        "hex": "#d6c9a8"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#3f3f46"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "NEW",
+    "image": "/uploads/graphic-camp-shirt.jpg"
+  },
+  {
+    "id": "onyx-oversized-tee",
+    "name": "Onyx Oversized Tee",
+    "category": "t-shirts",
+    "price": 39,
+    "rating": 4.8,
+    "reviews": 512,
+    "description": "The one that started it all. A heavy, boxy, oversized tee in jet black that keeps its shape wash after wash.",
+    "details": [
+      "240gsm heavyweight cotton",
+      "Oversized boxy silhouette",
+      "Pre-shrunk, enzyme washed"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      },
+      {
+        "name": "Bone",
+        "hex": "#e7e5e4"
+      },
+      {
+        "name": "Olive",
+        "hex": "#4d7c0f"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "HOT",
+    "featured": true,
+    "image": "/uploads/onyx-oversized-tee.jpg"
+  },
+  {
+    "id": "neon-district-tee",
+    "name": "Neon District Tee",
+    "category": "t-shirts",
+    "price": 35,
+    "rating": 4.7,
+    "reviews": 289,
+    "description": "Graphic tee with a neon street-map print on the back and a small chest logo. Built for the night.",
+    "details": [
+      "220gsm cotton jersey",
+      "Screen-printed graphic",
+      "Ribbed collar"
+    ],
+    "colors": [
+      {
+        "name": "Lime",
+        "hex": "#a3e635"
+      },
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "NEW",
+    "featured": true,
+    "image": "/uploads/neon-district-tee.jpg"
+  },
+  {
+    "id": "ghost-logo-tee",
+    "name": "Ghost Logo Tee",
+    "category": "t-shirts",
+    "price": 42,
+    "rating": 4.6,
+    "reviews": 176,
+    "description": "A minimal tonal logo print on heavyweight cotton. The quiet flex \u2014 looks black on black until the light hits it.",
+    "details": [
+      "250gsm combed cotton",
+      "Tonal puff print",
+      "Dropped shoulders"
+    ],
+    "colors": [
+      {
+        "name": "Charcoal",
+        "hex": "#3f3f46"
+      },
+      {
+        "name": "Bone",
+        "hex": "#e7e5e4"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "/uploads/ghost-logo-tee.jpg"
+  },
+  {
+    "id": "cargo-combat-trousers",
+    "name": "Cargo Combat Trousers",
+    "category": "trousers",
+    "price": 89,
+    "rating": 4.8,
+    "reviews": 341,
+    "description": "Six-pocket combat cargos in ripstop fabric with an adjustable ankle strap. Utility done right.",
+    "details": [
+      "Cotton ripstop twill",
+      "6-pocket utility layout",
+      "Adjustable ankle straps"
+    ],
+    "colors": [
+      {
+        "name": "Olive",
+        "hex": "#4d7c0f"
+      },
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "featured": true,
+    "image": "/uploads/cargo-combat-trousers.jpg"
+  },
+  {
+    "id": "pleated-wide-leg-trouser",
+    "name": "Pleated Wide-Leg Trouser",
+    "category": "trousers",
+    "price": 95,
+    "rating": 4.7,
+    "reviews": 158,
+    "description": "Double-pleated, wide-leg trousers in a drapey cotton-blend. Elevated basics for the streets.",
+    "details": [
+      "Cotton-twill blend",
+      "Double front pleats",
+      "Wide straight leg"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      },
+      {
+        "name": "Sand",
+        "hex": "#d6c9a8"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "/uploads/pleated-wide-leg-trouser.jpg"
+  },
+  {
+    "id": "carpenter-denim-pants",
+    "name": "Carpenter Denim Pants",
+    "category": "trousers",
+    "price": 75,
+    "oldPrice": 95,
+    "rating": 4.5,
+    "reviews": 203,
+    "description": "Workwear-inspired carpenter denim with a hammer loop and bar-tacked pocket. Broken-in from day one.",
+    "details": [
+      "14oz rigid denim",
+      "Carpenter pocket + loop",
+      "Relaxed taper"
+    ],
+    "colors": [
+      {
+        "name": "Denim",
+        "hex": "#1d4ed8"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#3f3f46"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "SALE",
+    "image": "/uploads/carpenter-denim-pants.jpg"
+  },
+  {
+    "id": "relaxed-cargo-shorts",
+    "name": "Relaxed Cargo Shorts",
+    "category": "shorts",
+    "price": 55,
+    "rating": 4.6,
+    "reviews": 187,
+    "description": "Above-the-knee cargos with four utility pockets and an elastic drawstring waist. Summer ready.",
+    "details": [
+      "Cotton twill, garment washed",
+      "4 utility pockets",
+      "Drawstring waist"
+    ],
+    "colors": [
+      {
+        "name": "Sand",
+        "hex": "#d6c9a8"
+      },
+      {
+        "name": "Olive",
+        "hex": "#4d7c0f"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "featured": true,
+    "image": "/uploads/relaxed-cargo-shorts.jpg"
+  },
+  {
+    "id": "tie-dye-beach-shorts",
+    "name": "Tie-Dye Beach Shorts",
+    "category": "shorts",
+    "price": 45,
+    "rating": 4.3,
+    "reviews": 89,
+    "description": "Vibrant tie-dye shorts in quick-dry fabric with a zip pocket. From the beach to the block.",
+    "details": [
+      "Quick-dry polyester blend",
+      "Zip security pocket",
+      "7\" inseam"
+    ],
+    "colors": [
+      {
+        "name": "Crimson",
+        "hex": "#b91c1c"
+      },
+      {
+        "name": "Denim",
+        "hex": "#1d4ed8"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "NEW",
+    "image": "/uploads/tie-dye-beach-shorts.jpg"
+  },
+  {
+    "id": "heavyweight-hoodie",
+    "name": "Heavyweight Hoodie",
+    "category": "hoodies",
+    "price": 85,
+    "rating": 4.9,
+    "reviews": 428,
+    "description": "A 450gsm brushed-fleece hoodie that stands up on its own. Boxed silhouette, double-lined hood, roomy pocket.",
+    "details": [
+      "450gsm brushed fleece",
+      "Double-lined hood",
+      "Kangaroo pocket, ribbed cuffs"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#3f3f46"
+      },
+      {
+        "name": "Bone",
+        "hex": "#e7e5e4"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "HOT",
+    "featured": true,
+    "image": "/uploads/heavyweight-hoodie.jpg"
+  },
+  {
+    "id": "embroidered-zip-hoodie",
+    "name": "Embroidered Zip Hoodie",
+    "category": "hoodies",
+    "price": 99,
+    "rating": 4.7,
+    "reviews": 142,
+    "description": "Full-zip hoodie with embroidered back graphic and matte metal hardware. The layer that finishes the fit.",
+    "details": [
+      "380gsm loopback fleece",
+      "Embroidered back graphic",
+      "YKK matte zipper"
+    ],
+    "colors": [
+      {
+        "name": "Olive",
+        "hex": "#4d7c0f"
+      },
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "/uploads/embroidered-zip-hoodie.jpg"
+  },
+  {
+    "id": "oversized-pullover",
+    "name": "Oversized Pullover",
+    "category": "hoodies",
+    "price": 79,
+    "oldPrice": 99,
+    "rating": 4.5,
+    "reviews": 231,
+    "description": "Baguette-fit pullover hoodie with dropped shoulders and a clean tonal chest print. Streetwear staple.",
+    "details": [
+      "360gsm brushed fleece",
+      "Dropped shoulders",
+      "Tonal chest print"
+    ],
+    "colors": [
+      {
+        "name": "Bone",
+        "hex": "#e7e5e4"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#3f3f46"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "SALE",
+    "image": "/uploads/oversized-pullover.jpg"
+  },
+  {
+    "id": "bomber-jacket",
+    "name": "Bomber Jacket",
+    "category": "jackets",
+    "price": 129,
+    "rating": 4.8,
+    "reviews": 167,
+    "description": "Satin bomber with ribbed collar, cuffs and hem, plus a fully lined interior. Classic silhouette, modern fit.",
+    "details": [
+      "Satin shell, quilted lining",
+      "Ribbed collar, cuffs, hem",
+      "Two-way front zipper"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      },
+      {
+        "name": "Olive",
+        "hex": "#4d7c0f"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "featured": true,
+    "image": "/uploads/bomber-jacket.jpg"
+  },
+  {
+    "id": "varsity-jacket",
+    "name": "Varsity Jacket",
+    "category": "jackets",
+    "price": 149,
+    "rating": 4.7,
+    "reviews": 118,
+    "description": "Wool-blend body with leather-look sleeves and embroidered lettering. A certified classic reissued.",
+    "details": [
+      "Wool-blend body",
+      "Faux-leather sleeves",
+      "Embroidered lettering"
+    ],
+    "colors": [
+      {
+        "name": "Charcoal",
+        "hex": "#3f3f46"
+      },
+      {
+        "name": "Bone",
+        "hex": "#e7e5e4"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "/uploads/varsity-jacket.jpg"
+  },
+  {
+    "id": "utility-trucker-jacket",
+    "name": "Utility Trucker Jacket",
+    "category": "jackets",
+    "price": 119,
+    "rating": 4.6,
+    "reviews": 94,
+    "description": "Rugged cotton canvas trucker with utility pockets and a corduroy collar. Built to be worn in.",
+    "details": [
+      "Heavy cotton canvas",
+      "Corduroy collar",
+      "6 utility pockets"
+    ],
+    "colors": [
+      {
+        "name": "Sand",
+        "hex": "#d6c9a8"
+      },
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "NEW",
+    "image": "/uploads/utility-trucker-jacket.jpg"
+  },
+  {
+    "id": "neon-grid-polo",
+    "name": "Neon Grid Polo",
+    "category": "t-shirts",
+    "price": 48,
+    "rating": 4.5,
+    "reviews": 67,
+    "description": "Mesh-knit polo with neon grid overlay. Breathable, bold, and built for summer nights.",
+    "details": [
+      "100% polyester mesh",
+      "Neon grid print",
+      "Regular fit"
+    ],
+    "colors": [
+      {
+        "name": "Lime",
+        "hex": "#a3e635"
+      },
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "NEW",
+    "image": "/uploads/neon-grid-polo.jpg"
+  },
+  {
+    "id": "waxed-canvas-bomber",
+    "name": "Waxed Canvas Bomber",
+    "category": "jackets",
+    "price": 179,
+    "oldPrice": 219,
+    "rating": 4.8,
+    "reviews": 89,
+    "description": "Heavy waxed canvas with leather trim. Water-resistant, rugged, and impossibly stylish.",
+    "details": [
+      "Waxed cotton canvas",
+      "Leather collar trim",
+      "Quilted satin lining"
+    ],
+    "sizes": [
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "badge": "SALE",
+    "featured": true,
+    "colors": [],
+    "image": "/uploads/waxed-canvas-bomber.jpg"
+  },
+  {
+    "id": "terry-cargo-shorts",
+    "name": "Terry Cargo Shorts",
+    "category": "shorts",
+    "price": 42,
+    "rating": 4.3,
+    "reviews": 134,
+    "description": "French terry cargo shorts with zip pockets. Loungewear meets streetwear.",
+    "details": [
+      "French terry cotton",
+      "Zip cargo pockets",
+      "Elastic waistband"
+    ],
+    "colors": [
+      {
+        "name": "Sage",
+        "hex": "#84cc16"
+      },
+      {
+        "name": "Stone",
+        "hex": "#d6ccc2"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "/uploads/terry-cargo-shorts.jpg"
+  },
+  {
+    "id": "distressed-flare-jeans",
+    "name": "Distressed Flare Jeans",
+    "category": "trousers",
+    "price": 110,
+    "rating": 4.6,
+    "reviews": 203,
+    "description": "Vintage-wash flare jeans with hand-distressed details. Retro vibes, modern fit.",
+    "details": [
+      "12oz stretch denim",
+      "Flare leg silhouette",
+      "Hand-distressed finish"
+    ],
+    "colors": [
+      {
+        "name": "Indigo",
+        "hex": "#3730a3"
+      },
+      {
+        "name": "Faded Black",
+        "hex": "#44403c"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "badge": "NEW",
+    "image": "/uploads/distressed-flare-jeans.jpg"
+  },
+  {
+    "id": "cropped-nylon-jacket",
+    "name": "Cropped Nylon Jacket",
+    "category": "jackets",
+    "price": 95,
+    "rating": 4.4,
+    "reviews": 56,
+    "description": "Lightweight cropped nylon windbreaker. Packable, water-resistant, endlessly layerable.",
+    "details": [
+      "Ripstop nylon",
+      "Cropped silhouette",
+      "Pack into inner pocket"
+    ],
+    "colors": [
+      {
+        "name": "Electric Blue",
+        "hex": "#3b82f6"
+      },
+      {
+        "name": "Neon Pink",
+        "hex": "#ec4899"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "badge": "NEW",
+    "featured": true,
+    "image": "/uploads/cropped-nylon-jacket.jpg"
+  },
+  {
+    "id": "reverse-print-tee",
+    "name": "Reverse Print Tee",
+    "category": "t-shirts",
+    "price": 42,
+    "rating": 4.7,
+    "reviews": 312,
+    "description": "Inside-out construction with reverse stitching details. Raw edges, premium weight.",
+    "details": [
+      "260gsm heavyweight cotton",
+      "Reverse stitch detail",
+      "Raw hem finish"
+    ],
+    "colors": [
+      {
+        "name": "Washed Black",
+        "hex": "#292524"
+      },
+      {
+        "name": "Off White",
+        "hex": "#f5f5f4"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "HOT",
+    "featured": true,
+    "image": "/uploads/reverse-print-tee.jpg"
+  },
+  {
+    "id": "tech-wind-pants",
+    "name": "Tech Wind Pants",
+    "category": "trousers",
+    "price": 78,
+    "rating": 4.6,
+    "reviews": 187,
+    "description": "Lightweight wind-resistant joggers with tapered leg. Gym to street, no compromises.",
+    "details": [
+      "Nylon ripstop fabric",
+      "Elastic waist + drawcord",
+      "Zippered pockets"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1e3a5f"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "/uploads/tech-wind-pants.jpg"
+  },
+  {
+    "id": "utility-vest",
+    "name": "Utility Vest",
+    "category": "jackets",
+    "price": 89,
+    "oldPrice": 109,
+    "rating": 4.5,
+    "reviews": 143,
+    "description": "Multi-pocket utility vest in ripstop canvas. Layer it over anything for instant edge.",
+    "details": [
+      "Cotton ripstop canvas",
+      "8 utility pockets",
+      "Snap front closure"
+    ],
+    "colors": [
+      {
+        "name": "Olive",
+        "hex": "#4d7c0f"
+      },
+      {
+        "name": "Sand",
+        "hex": "#d6c9a8"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "SALE",
+    "image": "/uploads/utility-vest.jpg"
+  },
+  {
+    "id": "boxy-linen-shirt",
+    "name": "Boxy Linen Shirt",
+    "category": "shirts",
+    "price": 72,
+    "rating": 4.4,
+    "reviews": 98,
+    "description": "Relaxed boxy linen shirt with coconut buttons. Summer essential, effortless cool.",
+    "details": [
+      "100% French linen",
+      "Boxy oversized fit",
+      "Coconut shell buttons"
+    ],
+    "colors": [
+      {
+        "name": "Sage",
+        "hex": "#84cc16"
+      },
+      {
+        "name": "Bone",
+        "hex": "#e7e5e4"
+      },
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "NEW",
+    "image": "/uploads/boxy-linen-shirt.jpg"
+  },
+  {
+    "id": "neon-track-jacket",
+    "name": "Neon Track Jacket",
+    "category": "jackets",
+    "price": 95,
+    "rating": 4.8,
+    "reviews": 276,
+    "description": "Retro track jacket with contrast piping. Full zip, ribbed cuffs, pure 90s energy.",
+    "details": [
+      "Polyester tricot fabric",
+      "Contrast piping detail",
+      "Ribbed collar + cuffs"
+    ],
+    "colors": [
+      {
+        "name": "Red",
+        "hex": "#dc2626"
+      },
+      {
+        "name": "Royal",
+        "hex": "#2563eb"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "featured": true,
+    "image": "/uploads/neon-track-jacket.jpg"
+  },
+  {
+    "id": "washed-denim-shorts",
+    "name": "Washed Denim Shorts",
+    "category": "shorts",
+    "price": 52,
+    "rating": 4.3,
+    "reviews": 165,
+    "description": "Vintage-wash denim shorts with frayed hem. Classic cut, broken-in feel.",
+    "details": [
+      "12oz washed denim",
+      "Raw frayed hem",
+      "Classic 5-pocket style"
+    ],
+    "colors": [
+      {
+        "name": "Light Wash",
+        "hex": "#93c5fd"
+      },
+      {
+        "name": "Dark Indigo",
+        "hex": "#1e3a5f"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "/uploads/washed-denim-shorts.jpg"
+  },
+  {
+    "id": "heavyweight-tee-3pack",
+    "name": "Heavyweight Tee 3-Pack",
+    "category": "t-shirts",
+    "price": 89,
+    "oldPrice": 117,
+    "rating": 4.9,
+    "reviews": 445,
+    "description": "Three premium heavyweight tees in essential colors. Same quality, triple the value.",
+    "details": [
+      "260gsm cotton each",
+      "Pre-shrunk + enzyme wash",
+      "Black, White, Charcoal"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      },
+      {
+        "name": "White",
+        "hex": "#fafafa"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "SALE",
+    "featured": true,
+    "image": "/uploads/heavyweight-tee-3pack.jpg"
+  },
+  {
+    "id": "quilted-liner-jacket",
+    "name": "Quilted Liner Jacket",
+    "category": "jackets",
+    "price": 110,
+    "rating": 4.7,
+    "reviews": 198,
+    "description": "Stand-alone quilted liner with snap buttons. The layering piece that does it all.",
+    "details": [
+      "Recycled polyester fill",
+      "Snap button closure",
+      "Packable design"
+    ],
+    "colors": [
+      {
+        "name": "Olive",
+        "hex": "#4d7c0f"
+      },
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "badge": "NEW",
+    "image": "/uploads/quilted-liner-jacket.jpg"
+  },
+  {
+    "id": "baggy-carpenter-pants",
+    "name": "Baggy Carpenter Pants",
+    "category": "trousers",
+    "price": 85,
+    "rating": 4.5,
+    "reviews": 221,
+    "description": "Oversized carpenter pants with double-knee reinforcement. Workwear royalty.",
+    "details": [
+      "Heavyweight cotton twill",
+      "Double knee panels",
+      "Hammer loop + tool pocket"
+    ],
+    "colors": [
+      {
+        "name": "Khaki",
+        "hex": "#c2b280"
+      },
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "/uploads/baggy-carpenter-pants.jpg"
+  },
+  {
+    "id": "cropped-hoodie",
+    "name": "Cropped Hoodie",
+    "category": "hoodies",
+    "price": 69,
+    "rating": 4.6,
+    "reviews": 178,
+    "description": "Cropped pullover hoodie with oversized hood. Boxy fit, raw hem, pure attitude.",
+    "details": [
+      "380gsm brushed fleece",
+      "Cropped raw hem",
+      "Oversized hood"
+    ],
+    "colors": [
+      {
+        "name": "Pink",
+        "hex": "#f472b6"
+      },
+      {
+        "name": "Black",
+        "hex": "#18181b"
+      },
+      {
+        "name": "Bone",
+        "hex": "#e7e5e4"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "badge": "NEW",
+    "image": "/uploads/cropped-hoodie.jpg"
+  }
+]

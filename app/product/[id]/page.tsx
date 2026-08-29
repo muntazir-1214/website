@@ -56,6 +56,7 @@ export default async function ProductPage({
               <ProductImage
                 category={product.category}
                 color={product.colors[0].hex}
+                image={product.image}
                 className="mx-auto w-full max-w-md drop-shadow-[0_30px_40px_rgba(0,0,0,0.5)] animate-floaty"
               />
             </div>

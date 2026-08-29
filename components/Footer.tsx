@@ -4,7 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 import { CATEGORIES } from "@/lib/products";
 
-export default function Footer() {
+type FooterContent = {
+  footerTagline: string;
+  footerDescription: string;
+  newsletterTitle: string;
+  newsletterDescription: string;
+};
+
+export default function Footer({ content }: { content: FooterContent }) {
   const [email, setEmail] = useState("");
   const [done, setDone] = useState(false);
 
@@ -19,11 +26,10 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
           <Link href="/" className="font-display text-3xl tracking-widest">
-            <span className="text-lime-400">✦</span> DARKWEAR
+            <span className="text-lime-400">✦</span> {content.footerTagline}
           </Link>
           <p className="max-w-xs text-sm leading-6 text-zinc-500">
-            Streetwear for the ones who move different. Heavyweight fabrics,
-            limited drops, worldwide shipping.
+            {content.footerDescription}
           </p>
         </div>
 
@@ -59,9 +65,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="label">Join the list</p>
+          <p className="label">{content.newsletterTitle}</p>
           <p className="mb-3 text-sm text-zinc-500">
-            Early access to drops and 10% off your first order.
+            {content.newsletterDescription}
           </p>
           {done ? (
             <p className="rounded-xl border border-lime-400/40 bg-lime-400/10 px-4 py-3 text-sm font-semibold text-lime-300 animate-pop-in">
@@ -86,7 +92,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-zinc-800/70">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-zinc-600 sm:flex-row sm:px-6">
-          <p>© {new Date().getFullYear()} DARKWEAR. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {content.footerTagline}. All rights reserved.</p>
           <p className="flex items-center gap-4">
             <span className="cursor-pointer transition-colors hover:text-lime-300">Instagram</span>
             <span className="cursor-pointer transition-colors hover:text-lime-300">TikTok</span>
