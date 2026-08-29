@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 type CategoryEntry = {
   id: string;
@@ -290,9 +291,24 @@ export default function CategoriesManager() {
                 </th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-zinc-800/50">
+            <motion.tbody
+              className="divide-y divide-zinc-800/50"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {},
+                visible: { transition: { staggerChildren: 0.04 } },
+              }}
+            >
               {categories.map((cat, i) => (
-                <tr key={cat.id} className="transition-colors hover:bg-zinc-800/30">
+                <motion.tr
+                  key={cat.id}
+                  className="transition-colors hover:bg-zinc-800/30"
+                  variants={{
+                    hidden: { opacity: 0, x: -10 },
+                    visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+                  }}
+                >
                   <td className="px-4 py-3">
                     <div className="flex flex-col items-center gap-0.5">
                       <button
@@ -365,9 +381,9 @@ export default function CategoriesManager() {
                       Delete
                     </button>
                   </td>
-                </tr>
+                </motion.tr>
               ))}
-            </tbody>
+            </motion.tbody>
           </table>
         </div>
 

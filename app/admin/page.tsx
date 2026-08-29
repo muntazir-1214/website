@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function AdminLogin() {
   const [password, setPassword] = useState("");
@@ -37,15 +38,25 @@ export default function AdminLogin() {
   return (
     <div className="w-full max-w-sm space-y-8">
       {/* Logo */}
-      <div className="text-center">
+      <motion.div
+        className="text-center"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         <h1 className="font-display text-5xl tracking-widest">
           <span className="text-lime-400">✦</span> DARKWEAR
         </h1>
         <p className="mt-2 text-sm text-zinc-500">Admin Portal</p>
-      </div>
+      </motion.div>
 
       {/* Login card */}
-      <div className="rounded-2xl border border-zinc-800 bg-zinc-900/80 p-8 backdrop-blur">
+      <motion.div
+        className="rounded-2xl border border-zinc-800 bg-zinc-900/80 p-8 backdrop-blur"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+      >
         <h2 className="mb-6 text-center text-lg font-semibold text-zinc-100">
           Sign in to manage your store
         </h2>
@@ -93,7 +104,7 @@ export default function AdminLogin() {
           Set <code className="text-zinc-500">ADMIN_PASSWORD</code> env var to
           change it.
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 }

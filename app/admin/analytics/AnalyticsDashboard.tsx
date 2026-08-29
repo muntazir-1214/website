@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import {
   BarChart,
   HorizontalBar,
@@ -82,7 +83,15 @@ export default function AnalyticsDashboard() {
   return (
     <div className="space-y-8">
       {/* Summary Cards */}
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+      <motion.div
+        className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: { transition: { staggerChildren: 0.07 } },
+        }}
+      >
         <StatCard
           label="Products"
           value={summary.totalProducts}
@@ -120,10 +129,15 @@ export default function AnalyticsDashboard() {
           sub="out of 5.0"
           color="text-orange-400"
         />
-      </div>
+      </motion.div>
 
       {/* Row: Sales Trend + Revenue by Status */}
-      <div className="grid gap-6 lg:grid-cols-3">
+      <motion.div
+        className="grid gap-6 lg:grid-cols-3"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
         <div className="lg:col-span-2 rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
           <h3 className="mb-4 font-semibold text-zinc-100">Sales Trend (14 days)</h3>
           <LineChart
@@ -162,10 +176,15 @@ export default function AnalyticsDashboard() {
             innerSublabel="total revenue"
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Row: Category Breakdown + Price Distribution */}
-      <div className="grid gap-6 lg:grid-cols-2">
+      <motion.div
+        className="grid gap-6 lg:grid-cols-2"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+      >
         <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
           <h3 className="mb-4 font-semibold text-zinc-100">Products by Category</h3>
           <HorizontalBar
@@ -187,10 +206,15 @@ export default function AnalyticsDashboard() {
             height={160}
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Row: Badge Distribution + Rating Distribution */}
-      <div className="grid gap-6 lg:grid-cols-2">
+      <motion.div
+        className="grid gap-6 lg:grid-cols-2"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+      >
         <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
           <h3 className="mb-4 font-semibold text-zinc-100">Badge Distribution</h3>
           <DonutChart
@@ -215,10 +239,15 @@ export default function AnalyticsDashboard() {
             height={140}
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Top Products Table */}
-      <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
+      <motion.div
+        className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
+      >
         <h3 className="mb-4 font-semibold text-zinc-100">Top Products by Reviews</h3>
         {data.topProducts.length > 0 ? (
           <div className="overflow-x-auto">
@@ -295,7 +324,7 @@ export default function AnalyticsDashboard() {
             No product data available yet.
           </p>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 }

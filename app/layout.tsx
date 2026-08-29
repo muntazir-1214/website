@@ -7,6 +7,8 @@ import { getContent } from "@/lib/adminStore";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
+import PageTransition from "@/components/PageTransition";
+import LoadingBar from "@/components/LoadingBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,8 +50,11 @@ export default async function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <CartProvider>
+          <LoadingBar />
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1">
+            <PageTransition>{children}</PageTransition>
+          </main>
           <Footer content={content} />
           <CartDrawer />
         </CartProvider>

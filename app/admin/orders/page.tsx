@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 type Order = {
   id: string;
@@ -49,7 +50,12 @@ export default function OrdersPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <motion.div
+        className="flex items-center justify-between"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+      >
         <div>
           <h1 className="font-display text-4xl tracking-wide text-zinc-50">
             ORDERS
@@ -61,7 +67,7 @@ export default function OrdersPage() {
         <Link href="/admin/orders/new" className="btn btn-primary text-sm">
           + New Order
         </Link>
-      </div>
+      </motion.div>
 
       {loading ? (
         <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-16 text-center">
@@ -103,11 +109,23 @@ export default function OrdersPage() {
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-zinc-800/50">
+              <motion.tbody
+                className="divide-y divide-zinc-800/50"
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: {},
+                  visible: { transition: { staggerChildren: 0.05 } },
+                }}
+              >
                 {orders.map((order) => (
-                  <tr
+                  <motion.tr
                     key={order.id}
                     className="transition-colors hover:bg-zinc-800/30"
+                    variants={{
+                      hidden: { opacity: 0, x: -10 },
+                      visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+                    }}
                   >
                     <td className="px-6 py-4">
                       <p className="text-sm font-mono text-zinc-300">
@@ -162,9 +180,9 @@ export default function OrdersPage() {
                         ))}
                       </div>
                     </td>
-                  </tr>
+                  </motion.tr>
                 ))}
-              </tbody>
+              </motion.tbody>
             </table>
           </div>
         </div>
