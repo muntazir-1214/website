@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { verifyAdmin } from "@/lib/adminAuth";
 import { renderOrderEmail } from "@/lib/emailTemplates";
+import { emailTestSchema } from "@/lib/validations";
 import type { Order } from "@/lib/adminStore";
 
 const DEMO_ORDER: Order = {
@@ -21,12 +23,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const body = await request.json();
-  const { to, status } = body as { to: string; status: Order["status"] };
-
-  if (!to?.trim()) {
-    return NextResponse.json({ error: "Recipient email is required" }, { status: 400 });
-  }
+  const parsed = emailTestSchema.parse(await request.json());
+  const to = parsed.to;
+  const status = parsed.status;
 
   // Check Resend is configured
   const apiKey = process.env.RESEND_API_KEY;

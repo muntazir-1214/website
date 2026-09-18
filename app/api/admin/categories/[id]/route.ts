@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { verifyAdmin } from "@/lib/adminAuth";
 import { updateCategory, deleteCategory } from "@/lib/adminStore";
-import type { CategoryEntry } from "@/lib/adminStore";
+import { updateCategorySchema } from "@/lib/validations";
+
+const paramSchema = z.object({ id: z.string().min(1).max(100) });
 
 export async function PUT(
   request: Request,
@@ -11,11 +14,17 @@ export async function PUT(
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
   try {
-    const { id } = await params;
-    const body = (await request.json()) as Partial<CategoryEntry>;
+    const { id } = paramSchema.parse(await params);
+    const body = updateCategorySchema.parse(await request.json());
     const updated = await updateCategory(id, body);
     return NextResponse.json(updated);
   } catch (err) {
+    if (err instanceof z.ZodError) {
+      return NextResponse.json(
+        { error: "Validation failed", details: err.issues },
+        { status: 400 }
+      );
+    }
     const message = err instanceof Error ? err.message : "Unknown error";
     return NextResponse.json({ error: message }, { status: 400 });
   }
@@ -29,7 +38,7 @@ export async function DELETE(
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
   try {
-    const { id } = await params;
+    const { id } = paramSchema.parse(await params);
     await deleteCategory(id);
     return NextResponse.json({ success: true });
   } catch (err) {

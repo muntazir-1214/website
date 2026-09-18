@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { verifyAdmin } from "@/lib/adminAuth";
 import { getProducts, addProduct } from "@/lib/adminStore";
+import { createProductSchema } from "@/lib/validations";
 import type { Product } from "@/lib/products";
 
 export async function GET() {
@@ -17,30 +19,17 @@ export async function POST(request: Request) {
   }
 
   try {
-    const body = (await request.json()) as Product;
-
-    // Basic validation
-    if (!body.id || !body.name || !body.category) {
-      return NextResponse.json(
-        { error: "id, name, and category are required" },
-        { status: 400 }
-      );
-    }
-
-    // Normalise defaults
-    const product: Product = {
-      ...body,
-      rating: body.rating ?? 0,
-      reviews: body.reviews ?? 0,
-      description: body.description ?? "",
-      details: body.details ?? [],
-      colors: body.colors ?? [],
-      sizes: body.sizes ?? ["S", "M", "L", "XL"],
-    };
-
+    const parsed = createProductSchema.parse(await request.json());
+    const product: Product = { ...parsed };
     const created = await addProduct(product);
     return NextResponse.json(created, { status: 201 });
   } catch (err) {
+    if (err instanceof z.ZodError) {
+      return NextResponse.json(
+        { error: "Validation failed", details: err.issues },
+        { status: 400 }
+      );
+    }
     const message = err instanceof Error ? err.message : "Unknown error";
     return NextResponse.json({ error: message }, { status: 400 });
   }

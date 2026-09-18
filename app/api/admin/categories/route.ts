@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { verifyAdmin } from "@/lib/adminAuth";
 import { getCategories, addCategory, saveCategories } from "@/lib/adminStore";
+import { addCategorySchema, saveCategoriesSchema, parseBody } from "@/lib/validations";
 import type { CategoryEntry } from "@/lib/adminStore";
 
 export async function GET() {
@@ -17,15 +19,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    const body = (await request.json()) as CategoryEntry;
-
-    if (!body.id?.trim() || !body.label?.trim()) {
-      return NextResponse.json(
-        { error: "id and label are required" },
-        { status: 400 }
-      );
-    }
-
+    const body = await parseBody(request, addCategorySchema);
     const existing = await getCategories();
     const cat: CategoryEntry = {
       id: body.id.trim().toLowerCase().replace(/\s+/g, "-"),
@@ -39,6 +33,12 @@ export async function POST(request: Request) {
     const created = await addCategory(cat);
     return NextResponse.json(created, { status: 201 });
   } catch (err) {
+    if (err instanceof z.ZodError) {
+      return NextResponse.json(
+        { error: "Validation failed", details: err.issues },
+        { status: 400 }
+      );
+    }
     const message = err instanceof Error ? err.message : "Unknown error";
     return NextResponse.json({ error: message }, { status: 400 });
   }
@@ -50,13 +50,16 @@ export async function PUT(request: Request) {
   }
 
   try {
-    const body = (await request.json()) as { categories: CategoryEntry[] };
-    if (!body.categories) {
-      return NextResponse.json({ error: "categories array required" }, { status: 400 });
-    }
+    const body = await parseBody(request, saveCategoriesSchema);
     await saveCategories(body.categories);
     return NextResponse.json({ success: true });
   } catch (err) {
+    if (err instanceof z.ZodError) {
+      return NextResponse.json(
+        { error: "Validation failed", details: err.issues },
+        { status: 400 }
+      );
+    }
     const message = err instanceof Error ? err.message : "Unknown error";
     return NextResponse.json({ error: message }, { status: 400 });
   }

@@ -1,11 +1,8 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { verifyAdmin } from "@/lib/adminAuth";
 import { getProducts, saveProducts } from "@/lib/adminStore";
-import type { Category } from "@/lib/products";
-
-const VALID_CATEGORIES: Category[] = [
-  "shirts", "t-shirts", "trousers", "shorts", "hoodies", "jackets",
-];
+import { bulkProductSchema, parseBody } from "@/lib/validations";
 
 export async function POST(request: Request) {
   if (!(await verifyAdmin())) {
@@ -13,53 +10,34 @@ export async function POST(request: Request) {
   }
 
   try {
-    const body = await request.json();
-    const { action, ids } = body as {
-      action: "delete" | "updateCategory";
-      ids: string[];
-      category?: Category;
-    };
-
-    if (!ids || !Array.isArray(ids) || ids.length === 0) {
-      return NextResponse.json(
-        { error: "No product IDs provided" },
-        { status: 400 }
-      );
-    }
-
+    const body = await parseBody(request, bulkProductSchema);
     const products = await getProducts();
-    const idSet = new Set(ids);
+    const idSet = new Set(body.ids);
     let affected = 0;
 
-    if (action === "delete") {
+    if (body.action === "delete") {
       const remaining = products.filter((p) => !idSet.has(p.id));
       affected = products.length - remaining.length;
       await saveProducts(remaining);
-    } else if (action === "updateCategory") {
-      const category = body.category as Category;
-      if (!VALID_CATEGORIES.includes(category)) {
-        return NextResponse.json(
-          { error: `Invalid category: ${category}` },
-          { status: 400 }
-        );
-      }
+    } else {
       const updated = products.map((p) => {
         if (idSet.has(p.id)) {
           affected++;
-          return { ...p, category };
+          return { ...p, category: body.category };
         }
         return p;
       });
       await saveProducts(updated);
-    } else {
-      return NextResponse.json(
-        { error: `Unknown action: ${action}` },
-        { status: 400 }
-      );
     }
 
     return NextResponse.json({ success: true, affected });
   } catch (err) {
+    if (err instanceof z.ZodError) {
+      return NextResponse.json(
+        { error: "Validation failed", details: err.issues },
+        { status: 400 }
+      );
+    }
     const message = err instanceof Error ? err.message : "Bulk operation failed";
     return NextResponse.json({ error: message }, { status: 500 });
   }

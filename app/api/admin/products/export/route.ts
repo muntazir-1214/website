@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { verifyAdmin } from "@/lib/adminAuth";
 import { getProducts } from "@/lib/adminStore";
+import { exportFormatSchema } from "@/lib/validations";
 import type { Product } from "@/lib/products";
 
 function productToCsvRow(p: Product): string {
@@ -33,7 +34,7 @@ export async function GET(request: Request) {
   }
 
   const url = new URL(request.url);
-  const format = url.searchParams.get("format") ?? "json";
+  const { format } = exportFormatSchema.parse({ format: url.searchParams.get("format") ?? "json" });
   const products = await getProducts();
 
   if (format === "csv") {

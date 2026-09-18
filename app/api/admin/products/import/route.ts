@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { verifyAdmin } from "@/lib/adminAuth";
 import { getProducts, saveProducts } from "@/lib/adminStore";
+import { importProductsSchema, parseBody } from "@/lib/validations";
 import type { Product, Category } from "@/lib/products";
 
 const VALID_CATEGORIES: Category[] = [
@@ -98,16 +100,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    const formData = await request.json();
-    const { content, format, mode } = formData as {
-      content: string;
-      format: "json" | "csv";
-      mode: "replace" | "merge";
-    };
-
-    if (!content?.trim()) {
-      return NextResponse.json({ error: "No content provided" }, { status: 400 });
-    }
+    const { content, format, mode } = await parseBody(request, importProductsSchema);
 
     let incoming: Product[];
 
@@ -157,7 +150,7 @@ export async function POST(request: Request) {
     }
     if (errors.length > 0) {
       return NextResponse.json(
-        { error: `Validation errors:\n${errors.join("\n")}` },
+        { error: `Validation errors: ${errors.join("; ")}` },
         { status: 400 }
       );
     }
@@ -185,6 +178,12 @@ export async function POST(request: Request) {
       mode,
     });
   } catch (err) {
+    if (err instanceof z.ZodError) {
+      return NextResponse.json(
+        { error: "Validation failed", details: err.issues },
+        { status: 400 }
+      );
+    }
     const message = err instanceof Error ? err.message : "Import failed";
     return NextResponse.json({ error: message }, { status: 500 });
   }

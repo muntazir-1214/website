@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { verifyAdmin } from "@/lib/adminAuth";
+import { uploadDeleteSchema } from "@/lib/validations";
 
 const UPLOAD_DIR = path.join(process.cwd(), "public", "uploads");
 const MAX_SIZE = 5 * 1024 * 1024; // 5MB
@@ -83,11 +85,7 @@ export async function DELETE(request: Request) {
   }
 
   try {
-    const { filename } = (await request.json()) as { filename: string };
-    if (!filename) {
-      return NextResponse.json({ error: "No filename provided" }, { status: 400 });
-    }
-
+    const { filename } = uploadDeleteSchema.parse(await request.json());
     const filepath = path.join(UPLOAD_DIR, path.basename(filename));
     const { unlink } = await import("node:fs/promises");
     await unlink(filepath);

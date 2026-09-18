@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { verifyAdmin } from "@/lib/adminAuth";
 import { getOrders, createOrder } from "@/lib/adminStore";
-import type { Order } from "@/lib/adminStore";
+import { createOrderSchema, parseBody } from "@/lib/validations";
 
 export async function GET() {
   if (!(await verifyAdmin())) {
@@ -17,23 +18,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    const body = (await request.json()) as {
-      customerName: string;
-      email: string;
-      items: Order["items"];
-      status?: Order["status"];
-    };
-
-    if (!body.customerName?.trim()) {
-      return NextResponse.json({ error: "Customer name is required" }, { status: 400 });
-    }
-    if (!body.email?.trim()) {
-      return NextResponse.json({ error: "Email is required" }, { status: 400 });
-    }
-    if (!body.items || body.items.length === 0) {
-      return NextResponse.json({ error: "At least one item is required" }, { status: 400 });
-    }
-
+    const body = await parseBody(request, createOrderSchema);
     const total = body.items.reduce((sum, item) => sum + item.price * item.qty, 0);
 
     const order = await createOrder({
@@ -46,6 +31,12 @@ export async function POST(request: Request) {
 
     return NextResponse.json(order, { status: 201 });
   } catch (err) {
+    if (err instanceof z.ZodError) {
+      return NextResponse.json(
+        { error: "Validation failed", details: err.issues },
+        { status: 400 }
+      );
+    }
     const message = err instanceof Error ? err.message : "Unknown error";
     return NextResponse.json({ error: message }, { status: 400 });
   }

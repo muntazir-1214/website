@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 
 const COOKIE_NAME = "admin_token";
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "darkwear2026";
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 export async function verifyAdmin(): Promise<boolean> {
   const cookieStore = await cookies();
@@ -9,7 +9,7 @@ export async function verifyAdmin(): Promise<boolean> {
   return token === ADMIN_PASSWORD;
 }
 
-export function getAdminPassword(): string {
+export function getAdminPassword(): string | undefined {
   return ADMIN_PASSWORD;
 }
 
